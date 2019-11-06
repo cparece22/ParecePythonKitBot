@@ -25,9 +25,9 @@ while True:
 	   RPL.servoWrite(R,1500)
  	   sleep(2.5)
 	else:
-	   RPL.servoWrite(L,1600)
-           RPL.servoWrite(R,1500)
-           sleep(2.5)   
+	    RPL.servoWrite(L,1600)
+            RPL.servoWrite(R,1500)
+            sleep(2.5)   
     elif 300 < currentDistanceLeft < 400:
         RPL.servoWrite(L,1400)
         RPL.servoWrite(R,1600)
