@@ -39,7 +39,7 @@ while True:
     elif 350 < currentDistanceLeft < 400:
         RPL.servoWrite(L,1400)
         RPL.servoWrite(R,1600)
-    elif currentDistanceLeft <= 325:
+    elif currentDistanceLeft <= 350:
         RPL.servoWrite(L,1450)
         RPL.servoWrite(R,1600)
     elif currentDistanceLeft >= 400:
