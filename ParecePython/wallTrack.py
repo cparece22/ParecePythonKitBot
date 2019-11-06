@@ -21,10 +21,11 @@ while True:
 
 
     if currentDistanceLeft <= 15:
-	sleep(0.5)
-	RPL.servoWrite(L,1400)
-        RPL.servoWrite(R,1500)
-        sleep(1.30)
+	sleep(1.0)
+	if currentDistanceLeft <= 15:
+       	   RPL.servoWrite(L,1500)
+           RPL.servoWrite(R,1600)
+           sleep(1.30)
 
     if currentDistanceForward >= 315:
         if currentDistanceRight < currentDistanceLeft:
