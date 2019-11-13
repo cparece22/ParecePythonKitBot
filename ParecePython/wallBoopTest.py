@@ -19,7 +19,7 @@ while True:
     currentDistanceLeft = RPL.analogRead(sensor_pinL)
     currentDistanceRight = RPL.analogRead(sensor_pinR)
 #1.2
-    if 308 <= currentDistanceForward <= 310:
+    if 309 <= currentDistanceForward <= 310:
         RPL.servoWrite(L,0)
         RPL.servoWrite(R,0)
         print("Optimal Distance Achieved")
@@ -27,14 +27,17 @@ while True:
         print("Commence Wall Boop")
         RPL.servoWrite(L,1400)
         RPL.servoWrite(R,1600)
-        sleep(2.00)
+        sleep(2.25)
         RPL.servoWrite(L,0)
         RPL.servoWrite(R,0) 
         break
+     
+    elif 305 <=  currentDistanceForward <= 308:
+        RPL.servoWrite(L,1490)
+        RPL.servoWrite(R,1510)
     elif currentDistanceForward <= 310:
         RPL.servoWrite(L,1400)
         RPL.servoWrite(R,1600)
     elif currentDistanceForward >= 310:
         RPL.servoWrite(L,1600)
         RPL.servoWrite(R,1400)
-
