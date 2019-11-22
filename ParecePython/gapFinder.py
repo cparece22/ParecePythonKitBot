@@ -14,5 +14,20 @@ while True:
     currentDistanceForward = RPL.analogRead(sensor_pinF)
     currentDistanceLeft = RPL.analogRead(sensor_pinL)
     currentDistanceRight = RPL.analogRead(sensor_pinR)
-    if currentDistanceLeft >= 315:
+    if currentDistanceLeft <= 10:
+        RPL.servoWrite(L,0)
+        RPL.servoWrite(R,0)
+        if currentDistanceForward >= 100:
+            RPL.servoWrite(L,1450)
+            RPL.servoWrite(R,1600)
+            sleep(0.5)
+            print(currentDistanceForward)
+            break
+    elif currentDistanceLeft >= 315:
+        RPL.servoWrite(L,1400)
+        RPL.servoWrite(R,1550)
+    elif currentDistanceLeft >= 315:
+        RPL.servoWrite(L,1450)
+        RPL.servoWrite(R,1600)
+    
         
